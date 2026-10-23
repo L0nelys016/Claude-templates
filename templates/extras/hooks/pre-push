@@ -1,0 +1,8 @@
+#!/bin/sh
+# Branch name must be <feature|bugfix|hotfix|refactor|docs|chore|temp|wip>/<what> (or a long-lived branch).
+branch=$(git rev-parse --abbrev-ref HEAD)
+if printf '%s' "$branch" | grep -Eq '^(main|master|develop)$|^(feature|bugfix|hotfix|refactor|docs|chore|temp|wip)/.+'; then
+  exit 0
+fi
+echo "pre-push: branch '$branch' must look like feature|bugfix|hotfix|refactor|docs|chore|temp|wip/<what>" >&2
+exit 1
