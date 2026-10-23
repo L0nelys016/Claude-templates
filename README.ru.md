@@ -45,3 +45,7 @@ python setup.py --target . --stacks react,nodejs --dry-run
 ```bash
 python -m unittest discover tests
 ```
+
+## Скачивание (клонировать не нужно)
+
+Возьмите `claude-templates.py` из [последнего релиза](../../releases/latest) и запустите `python claude-templates.py`. Это один файл со всеми встроенными шаблонами. Собрать его самому: `python build.py` (результат: `dist/claude-templates.py`); пуш тега `v*` публикует релиз автоматически.

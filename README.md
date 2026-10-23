@@ -47,3 +47,7 @@ Create `templates/stacks/<name>/CLAUDE.md` and `REVIEW.md`, add the name to `STA
 ```bash
 python -m unittest discover tests
 ```
+
+## Download (no clone needed)
+
+Take `claude-templates.py` from the [latest release](../../releases/latest) and run `python claude-templates.py`. It is a single file with all templates embedded. Build it yourself with `python build.py` (output: `dist/claude-templates.py`); pushing a `v*` tag publishes a release automatically.

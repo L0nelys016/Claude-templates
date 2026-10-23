@@ -10,7 +10,8 @@ import os
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent / "templates"
+VERSION = "0.1.0"
+ROOT = Path(__file__).resolve().parent / "templates"  # build.py swaps this line in the bundle
 STACKS = ["csharp", "unity", "nodejs", "typescript", "react"]
 IMPLIES = {"unity": ["csharp"], "react": ["typescript"]}
 WEB = {"nodejs", "typescript", "react"}
@@ -166,6 +167,7 @@ def choose(title, options, multi):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--version", action="version", version=f"claude-templates {VERSION}")
     ap.add_argument("--target", help="project folder (default: ask, '.' if empty)")
     ap.add_argument("--stacks", help=f"comma list of: {', '.join(STACKS)}")
     ap.add_argument("--area", help=f"one of: {', '.join(AREAS)}, none")
