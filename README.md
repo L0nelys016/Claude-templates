@@ -1,5 +1,7 @@
 # Claude-templates
 
+[Русская версия](README.ru.md)
+
 Rule templates (`CLAUDE.md`, `REVIEW.md`) for Claude projects and a script that installs them.
 
 Stacks: **C#**, **Unity** (implies C#), **Node.js**, **TypeScript**, **React** (implies TypeScript).
