@@ -1,0 +1,9 @@
+# .NET
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+TestResults/
+*.nupkg
+.idea/
